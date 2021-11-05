@@ -214,8 +214,8 @@ header .logo {
 #about img {
     z-index: 1;
     margin-right: 20px;
-    max-height: 400px;
-    margin-bottom: -25%;
+    max-height: 350px;
+    margin-bottom: -35%;
 }
   
 
@@ -235,7 +235,7 @@ header .logo {
 
 }
 
-  #about div  h3{
+  #about div  h2{
    font-size: 1.5em;
    font-family: 'Poppins';
    text-transform: uppercase;
@@ -257,7 +257,7 @@ header .logo {
 
 }
 
-#about div h4{
+#about div h3{
     margin-top: 15px;
     font-size: 1.15em;
     font-family: 'Raleway';
@@ -278,7 +278,8 @@ header .logo {
 }
 
   .headline {
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
     text-align: center;
     background-color: #FFFFFF;
 
@@ -293,6 +294,13 @@ header .logo {
     font-family: 'Poppins';
     font-weight: 200;
     text-transform: capitalize;
+    line-height: 1em;
+}
+.headline h2 {
+  color: #11233f;
+  font-size: 1.15em;
+  font-family: 'Poppins';
+  margin-top: 10px
 }
 
 .headline .fa {
@@ -302,12 +310,15 @@ header .logo {
 
   #favorites .fav1 {
     background-image: url(../images/dimos.jpeg);
+    background-size: cover;
+
     margin: 25px 15px;
     min-height: 300px;
     box-shadow: .5px .5px 5px .5px #2e2d2d73;
   }
   #favorites .fav2 {
     background-image: url(../images/zingermans.jpeg);
+    background-size: cover;
     margin: 25px 15px;
     min-height: 300px;
     box-shadow: .5px .5px 5px .5px #2e2d2d73;
@@ -315,18 +326,21 @@ header .logo {
 
   #favorites .fav3 {
     background-image: url(../images/of-rice.jpeg);
+    background-size: cover;
     margin: 25px 15px;
     min-height: 300px;
     box-shadow: .5px .5px 5px .5px #2e2d2d73;
   }
   #favorites .fav4 {
     background-image: url(../images/fritas.jpeg);
+    background-size: cover;
     margin: 25px 15px;
     min-height: 300px;
     box-shadow: .5px .5px 5px .5px #2e2d2d73;
   }
   #favorites .fav5 {
     background-image: url(../images/crumbl.jpeg);
+    background-size: cover;
     margin: 25px 15px;
     min-height: 300px;
     box-shadow: .5px .5px 5px .5px #2e2d2d73;
@@ -387,6 +401,7 @@ header .logo {
   #favorites .fav1:hover {
     display: block;
     background: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)), url(../images/dimos.jpeg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,6 +412,7 @@ header .logo {
  #favorites .fav2:hover, #favorites .fav3:hover  {
     display: block;
     background: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)), url(../images/zingermans.jpeg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,6 +422,7 @@ header .logo {
   #favorites .fav3:hover  {
     display: block;
     background: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)), url(../images/of-rice.jpeg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -415,19 +432,23 @@ header .logo {
   #favorites .fav4:hover  {
     display: block;
     background: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)), url(../images/fritas.jpeg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
   }
   #favorites .fav5:hover  {
     display: block;
     background: linear-gradient(180deg, rgb(255 255 255 / 65%), rgb(255 255 255 / 65%)), url(../images/crumbl.jpeg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
   }
  
@@ -462,17 +483,16 @@ header .logo {
 
 #contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: 75px 45px;
     background-image:linear-gradient(180deg, rgb(255 252 232 / 65%), rgb(255 255 247 / 70%)), url(../images/map.jpg);
 }
 
 #contact .contact-photo {
-
-    margin: 20px;
-}
+    width: 60%;
+    margin-top: 20px;
+} 
 
 #contact .contact-info {
     display: flex;
@@ -483,7 +503,6 @@ header .logo {
 #contact .contact-info h1 {
     font-size: 3.5em;
     font-family: 'Abril Fatface';
-    font-weight: 600;
     color: #3e577d;
     line-height: 1em;
     margin-bottom: 10px;
@@ -549,7 +568,7 @@ footer .footer_links .footer_item a{
     margin-right: 18px;
     font-family: 'Raleway';
     font-weight: 800;
-    size: 16px;
+    size: 14px;
     color: #162F54;
     text-decoration: none;
 }
@@ -858,56 +877,52 @@ footer img.logo{
 .gallery-wall .container {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(3, auto);
     justify-content: space-between;
 }
+
 
 .gallery-wall .container .breakfast-gallery{
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+ 
 }
 
 .img-one {
     grid-column: 1 / -1;
+
 }
 .img-two {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
 }
 .img-three {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 1;
 }
 
 .gallery-wall .container .lunch-gallery{
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows:  repeat(4, auto);
 }
 
 .img-four {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
-}
-.img-five {
-    grid-column: 3 / span 2;
     grid-row: 1 / span 1;
 }
-.img-six {
-    grid-column: 3 / span 2;
+.img-five {
     grid-row: 2 / span 1;
 }
-.img-seven {
-    grid-column: 3 / span 2;
+.img-six {
     grid-row: 3 / span 1;
+}
+.img-seven {
+    grid-row: 4 / span 1;
 }
 
 .gallery-wall .container .dinner-gallery{
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
 }
 
 .img-eight {
@@ -915,28 +930,28 @@ footer img.logo{
     grid-row: 1 / span 1;
 }
 .img-nine {
-    grid-column: 3 / -1;
-    grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
 }
 .img-ten {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 1;
 }
 .img-eleven {
-    grid-column: 3 / -1;
-    grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
 }
 .img-twelve {
-    grid-column: 1 / span 2;
-    grid-row: 3 / -1;
+  grid-column: 1 / span 2;
+  grid-row: 5 / span;
 }
 .img-thirteen {
-    grid-column: 3 / -1;
-    grid-row: 3 / -1;
+  grid-column: 1 / span 2;
+  grid-row: 6 / -1;
 }
   
 .gallery-wall .container img {
-    height: 100%;
+    width: 100%;
     object-fit: cover;
 } 
 
@@ -1085,8 +1100,8 @@ hr {
     color: #162f54;
     margin: -20px;
 }
-.contact-bckgrnd2 #logo {
-    max-height:200px;
+.contact-bckgrnd2 img  {
+    max-width:250px;
 }
 .contact-bckgrnd2 div {
     text-align: left;
